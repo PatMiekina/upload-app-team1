@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon .",
     "dev": "nodemon . & npm run scss",
-    "scss": "sass --watch public/stylesheets/main.scss public/stylesheets/main.css"
+    "scss": "sass --watch public/stylesheets/main.scss public/stylesheets/main.css",
+    "cypress:open": "cypress open"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "sass": "^1.54.3"
   },
   "devDependencies": {
+    "cypress": "^10.4.0",
     "nodemon": "^2.0.19"
   }
 }
