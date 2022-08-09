@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node .",
+    "start:nodemon": "nodemon .",
     "dev": "nodemon . & npm run scss",
     "scss": "sass --watch public/stylesheets/main.scss public/stylesheets/main.css",
     "cypress:open": "cypress open",
