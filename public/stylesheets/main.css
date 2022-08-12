@@ -6772,3 +6772,9 @@ x:-moz-any-link {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* our own styling to adjust to the prototype kit */
+.app-related-items {
+  border-top: 2px solid #1d70b8;
+  padding-top: 10px;
+}
