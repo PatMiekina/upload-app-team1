@@ -60,12 +60,13 @@ router.post('/what-is-your-name', (req, res) => {
     res.redirect('/what-is-your-ni-number');
 })
 
-router.get('/what-is-your-name', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
-})
 
 router.get('/what-is-your-ni-number', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-ni-number.html'))
+})
+
+router.post('/what-is-your-ni-number', (req, res) => {
+    res.redirect('/upload-photo-id');
 })
 
 module.exports = router
