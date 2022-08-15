@@ -9,7 +9,7 @@ describe('what is your NI number', () => {
           .should('have.value', 'SZ12345678B')
     })
 
-    it('lets you start the process', () => {
+    it('lets you move to next page', () => {
         cy.get('#govuk-button-continue').click()
         cy.url().should('include', '/upload-photo-id')
     })
