@@ -44,12 +44,12 @@ router.post('/virtual-meeting-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-router.post('/upload-photo-id', (req, res) => {
-    res.redirect('/photo-confirmation')
-})
-
 router.get('/upload-photo-id', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
+})
+
+router.post('/upload-photo-id', (req, res) => {
+    res.redirect('/photo-confirmation')
 })
 
 router.get('/what-is-your-name', (req, res) => {
