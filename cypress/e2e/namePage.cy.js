@@ -9,7 +9,7 @@ describe('what is your name', () => {
           .should('have.value', 'John Doe')
     })
 
-    it('lets you start the process', () => {
+    it('lets you move to next page', () => {
         cy.get('#govuk-button-continue').click()
         cy.url().should('include', '/what-is-your-ni-number')
     })

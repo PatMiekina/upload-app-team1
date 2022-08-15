@@ -8,6 +8,18 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/start.html'))
 })
 
+router.get('/check-answers', (req, res) => {
+    res.send("Check answers")
+})
+
+router.get('/contact-details', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/contact-details.html'))
+})
+
+router.post('/contact-details', (req, res) => {
+    res.redirect('/check-answers');
+})
+
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
