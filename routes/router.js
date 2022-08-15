@@ -8,6 +8,14 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/start.html'))
 })
 
+router.get('/arrange-virtual-meeting', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/arrange-virtual-meeting.html'))
+})
+
+router.post('/arrange-virtual-meeting', (req, res) => {
+    res.redirect('/virtual-meeting-time');
+})
+
 router.get('/arrange-face-to-face', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/arrange-face-to-face.html'))
 })
