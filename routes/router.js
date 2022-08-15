@@ -12,4 +12,8 @@ router.get('/start', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/start.html'))
 })
 
+router.get('/what-is-your-name', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
+})
+
 module.exports = router
