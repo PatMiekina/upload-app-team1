@@ -28,8 +28,8 @@ router.post('/face-to-face-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-router.get('/upload-photo-ID', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
+router.get('/upload-photo-id', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
 })
 
 router.post('/what-is-your-name', (req, res) => {
@@ -42,6 +42,11 @@ router.get('/what-is-your-name', (req, res) => {
 
 router.get('/what-is-your-ni-number', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-ni-number.html'))
+})
+
+router.post('/what-is-your-ni-number', (req, res) => {
+    // add something to database
+    res.redirect('/upload-photo-id');
 })
 
 module.exports = router
