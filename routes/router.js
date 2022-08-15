@@ -45,8 +45,8 @@ router.post('/virtual-meeting-time', (req, res) => {
 })
 
 
-router.get('/upload-photo-ID', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
+router.get('/upload-photo-id', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
 })
 
 router.get('/what-is-your-name', (req, res) => {
