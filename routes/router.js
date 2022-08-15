@@ -28,12 +28,16 @@ router.post('/face-to-face-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-router.get('/what-is-your-name', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
+router.get('/upload-photo-ID', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
 })
 
 router.post('/what-is-your-name', (req, res) => {
     res.redirect('/what-is-your-ni-number');
+})
+
+router.get('/what-is-your-name', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
 
 router.get('/what-is-your-ni-number', (req, res) => {
