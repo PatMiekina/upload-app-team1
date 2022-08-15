@@ -1,6 +1,6 @@
 describe('start page', () => {
     it('lands on the page', () => {
-      cy.visit('http://localhost:3000/start')
+      cy.visit('http://localhost:3000')
     })
 
     it('lets you start the process', () => {
