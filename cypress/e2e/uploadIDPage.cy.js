@@ -4,7 +4,7 @@ describe('Upload ID page', () => {
     })
 
     it('it moves to the next page- photo confirmation', () => {
-        cy.get('#gov-button-upload-my-photo-id').click()
+        cy.get('#gov-button-continue').click()
         cy.url().should('include', '/photo-confirmation')
     })
 })
