@@ -20,6 +20,14 @@ router.post('/contact-details', (req, res) => {
     res.redirect('/check-answers');
 })
 
+router.get('/face-to-face-time', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/face-to-face-time.html'))
+})
+
+router.post('/face-to-face-time', (req, res) => {
+    res.redirect('/contact-details');
+})
+
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
