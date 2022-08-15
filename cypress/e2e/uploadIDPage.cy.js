@@ -1,6 +1,6 @@
 describe('Upload ID page', () => {
     it('lands on the page', () => {
-      cy.visit('http://localhost:3000/upload-photo-ID')
+      cy.visit('http://localhost:3000/upload-photo-id')
     })
 
     it('it moves to the next page- photo confirmation', () => {
