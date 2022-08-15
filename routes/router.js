@@ -28,7 +28,6 @@ router.post('/face-to-face-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-virtual-meeting-time
 router.get('/virtual-meeting-time', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/virtual-meeting-time.html'))
 })
