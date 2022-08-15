@@ -57,41 +57,71 @@
     <!-- end of breadcrumbs -->
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <!-- body -->
-
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-        
-              <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
-        
-              <form class="form" action="/what-is-your-ni-number" method="post">
-        
-                <div class="govuk-form-group">
-                  <div id="national-insurance-number-hint" class="govuk-hint">
-                    It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+          <div class="govuk-grid-column-two-thirds">
+      
+            <h1 class="govuk-heading-xl">Which type of photo ID are you uploading?</h1>
+      
+            <form class="form" action="/photo-confirmation" method="post">
+      
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="upload-photo-id" name="upload-photo-id" type="radio" value="Passport">
+                      <label class="govuk-label govuk-radios__label" for="upload-photo-id">
+                        Passport
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="upload-photo-id-2" name="upload-photo-id" type="radio" value="Driving Licence">
+                      <label class="govuk-label govuk-radios__label" for="upload-photo-id-2">
+                        Driving licence
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="upload-photo-id-3" name="upload-photo-id" type="radio" value="Formal ID card">
+                      <label class="govuk-label govuk-radios__label" for="upload-photo-id-3">
+                        Formal ID card
+                      </label>
+                    </div>
                   </div>
-                  <input class="govuk-input govuk-input--width-10 national-insurance-number" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+                    <br><br>
+                  <h2 class="govuk-heading-m">Select ID file</h2>
+      
+       
+                    <div id="event-name-hint" class="govuk-hint">
+                      We can accept the following file types: .jpg .jpeg .png .pdf<br>
+                      We can accept a file with the maximum size of 15mb.              
+                    </div>
+      
+      
+                    <div class="govuk-form-group">
+      
+                      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                    </div>
+      
+              
+                </fieldset>
+              </div>
+      
+              <button class="govuk-button" id="gov-button-continue" data-module="govuk-button">Continue</button>
+      
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    I need help uploading my ID.
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  !!!!! Placeholder text for video !!!!!
                 </div>
-        
-                <button class="govuk-button govuk-button-continue" id="govuk-button-continue" data-module="govuk-button">Continue</button>
-        
-                <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      I cannot find my National Insurance number.
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    You can also find your National Insurance number on:<br>
-                    <li>letters about tax, pensions and benefits</li>
-                    <li>your personal tax account.</li>
-                  </div>
-                </details>
-        
-              </form>
-        
-            </div>
+              </details>
+      
+            </form>
+      
           </div>
-    
+        </div>
         <!-- end of body -->
     </main>
   </div>

@@ -44,11 +44,6 @@ router.post('/virtual-meeting-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-
-router.get('/upload-photo-ID', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
-})
-
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
@@ -63,6 +58,18 @@ router.get('/what-is-your-name', (req, res) => {
 
 router.get('/what-is-your-ni-number', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-ni-number.html'))
+})
+
+router.post('/what-is-your-ni-number', (req, res) => {
+    res.redirect('/upload-photo-id');
+})
+
+router.post('/upload-photo-id', (req, res) => {
+    res.redirect('/photo-confirmation');
+})
+
+router.get('/upload-photo-id', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
 })
 
 module.exports = router
