@@ -28,6 +28,7 @@ router.post('/face-to-face-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
+virtual-meeting-time
 router.get('/virtual-meeting-time', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/virtual-meeting-time.html'))
 })
@@ -36,12 +37,21 @@ router.post('/virtual-meeting-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
+
+router.get('/upload-photo-ID', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
+})
+
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
 
 router.post('/what-is-your-name', (req, res) => {
     res.redirect('/what-is-your-ni-number');
+})
+
+router.get('/what-is-your-name', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
 
 router.get('/what-is-your-ni-number', (req, res) => {
