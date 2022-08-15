@@ -32,6 +32,18 @@ router.get('/upload-photo-id', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
 })
 
+router.get('/virtual-meeting-time', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/virtual-meeting-time.html'))
+})
+
+router.post('/virtual-meeting-time', (req, res) => {
+    res.redirect('/contact-details');
+})
+
+router.get('/what-is-your-name', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
+})
+
 router.post('/what-is-your-name', (req, res) => {
     res.redirect('/what-is-your-ni-number');
 })
