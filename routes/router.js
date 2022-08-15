@@ -8,6 +8,14 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/start.html'))
 })
 
+router.get('/arrange-face-to-face', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/arrange-face-to-face.html'))
+})
+
+router.post('/arrange-face-to-face', (req, res) => {
+    res.redirect('/face-to-face-time');
+})
+
 router.get('/check-answers', (req, res) => {
     res.send("Check answers")
 })
