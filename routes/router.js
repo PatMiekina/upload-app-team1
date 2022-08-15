@@ -28,6 +28,14 @@ router.post('/face-to-face-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
+router.get('/virtual-meeting-time', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/virtual-meeting-time.html'))
+})
+
+router.post('/virtual-meeting-time', (req, res) => {
+    res.redirect('/contact-details');
+})
+
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
