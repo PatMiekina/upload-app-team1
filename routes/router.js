@@ -82,17 +82,14 @@ router.get('/upload-photo-id', (req, res) => {
 })
 
 router.post('/verify-method-answer', function (req, res) {
-    console.log(req.body)
-   
-
-//     var verifyMethod = req.session.data['verify-documents']
-//     if (verifyMethod == "Upload a video"){
-//       res.redirect('/upload-a-video')
-//     } else if (verifyMethod == "Arrange a virtual meeting"){
-//         res.redirect('/arrange-virtual-meeting')
-//     } else {
-//       res.redirect('/arrange-face-to-face')
-//     }
+    var verifyMethod = req.body['verify-documents']
+    if (verifyMethod == "Upload a video"){
+      res.redirect('/upload-a-video')
+    } else if (verifyMethod == "Arrange a virtual meeting"){
+        res.redirect('/arrange-virtual-meeting')
+    } else {
+      res.redirect('/arrange-face-to-face')
+    }
 })
 
 router.get('/verify-documents', (req, res) => {

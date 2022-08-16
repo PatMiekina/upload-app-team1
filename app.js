@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const port = process.env.PORT || 3000
-const session = require('express-session')
-app.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+  extended: true
 }))
+
 
 app.use(express.json());
 
