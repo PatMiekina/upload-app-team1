@@ -88,4 +88,12 @@ router.post('/photo-confirmation', (req, res) => {
     res.redirect('/verify-documents');
 })
 
+router.get('/upload-a-video', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-a-video.html'))
+})
+
+router.post('/upload-a-video-continue', (req, res) => {
+    res.redirect('/contact-details');
+})
+
 module.exports = router
