@@ -96,4 +96,19 @@ router.post('/upload-a-video-continue', (req, res) => {
     res.redirect('/contact-details');
 })
 
+router.get('/verify-documents', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/verify-documents.html'))
+})
+
+router.post('/verify-method-answer', function (req, res) {
+    var verifyMethod = req.body['verify-documents']
+    if (verifyMethod == "Upload a video"){
+      res.redirect('/upload-a-video')
+    } else if (verifyMethod == "Arrange a virtual meeting"){
+        res.redirect('/arrange-virtual-meeting')
+    } else {
+      res.redirect('/arrange-face-to-face')
+    }
+ })
+ 
 module.exports = router
