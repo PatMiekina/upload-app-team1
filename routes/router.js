@@ -8,6 +8,22 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/start.html'))
 })
 
+router.get('/arrange-virtual-meeting', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/arrange-virtual-meeting.html'))
+})
+
+router.post('/arrange-virtual-meeting', (req, res) => {
+    res.redirect('/virtual-meeting-time');
+})
+
+router.get('/arrange-face-to-face', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/arrange-face-to-face.html'))
+})
+
+router.post('/arrange-face-to-face', (req, res) => {
+    res.redirect('/face-to-face-time');
+})
+
 router.get('/check-answers', (req, res) => {
     res.send("Check answers")
 })
@@ -36,11 +52,6 @@ router.post('/virtual-meeting-time', (req, res) => {
     res.redirect('/contact-details');
 })
 
-
-router.get('/upload-photo-ID', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/upload-photo-ID.html'))
-})
-
 router.get('/what-is-your-name', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-name.html'))
 })
@@ -63,6 +74,18 @@ router.get('/photo-confirmation', (req, res) => {
 
 router.post('/photo-confirmation', (req, res) => {
     res.redirect('/verify-documents');
+})
+
+router.post('/what-is-your-ni-number', (req, res) => {
+    res.redirect('/upload-photo-id');
+})
+
+router.post('/upload-photo-id', (req, res) => {
+    res.redirect('/photo-confirmation');
+})
+
+router.get('/upload-photo-id', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/upload-photo-id.html'))
 })
 
 module.exports = router

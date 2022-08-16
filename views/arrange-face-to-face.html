@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template ">
+
 <head>
-    <meta charset="utf-8">
-    <title>GOV.UK - The best place to find government services and information</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#0b0c0c">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+  <meta charset="utf-8">
+  <title>GOV.UK - The best place to find government services and information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0c">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+
+
+  <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
 </head>
 
 <body class="govuk-template__body ">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+
   </script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
@@ -41,76 +48,78 @@
     </div>
   </header>
   
+
   <div class="govuk-width-container ">
     <!-- home/section/subsection (breadcrumbs) -->
     <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#">Section</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link">Subsection</a>
-          </li>
-        </ol>
-      </div>
+        <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+    </div>
     <!-- end of breadcrumbs -->
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <!-- body -->
-        <div class="govuk-grid-row">
+        <div class="govuk-grid-row govuk-body">
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-xl">Which type of photo ID are you uploading?</h1>
-              <form class="form" action="/photo-confirmation" method="post">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-                    <div class="govuk-radios" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="upload-photo-id" name="upload-photo-id" type="radio" value="Passport">
-                        <label class="govuk-label govuk-radios__label" for="upload-photo-id">
-                          Passport
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="upload-photo-id-2" name="upload-photo-id" type="radio" value="Driving Licence">
-                        <label class="govuk-label govuk-radios__label" for="upload-photo-id-2">
-                          Driving licence
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="upload-photo-id-3" name="upload-photo-id" type="radio" value="Formal ID card">
-                        <label class="govuk-label govuk-radios__label" for="upload-photo-id-3">
-                          Formal ID card
-                        </label>
-                      </div>
-                    </div>
-                      <br><br>
-                    <h2 class="govuk-heading-m">Select ID file</h2>         
-                      <div id="event-name-hint" class="govuk-hint">
-                        We can accept the following file types: .jpg .jpeg .png .pdf<br>
-                        We can accept a file with the maximum size of 15mb.              
-                      </div>
-                      <div class="govuk-form-group">
         
-                        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-                      </div>             
-                  </fieldset>
+              <h1 class="govuk-heading-xl">Arrange a face to face meeting</h1>
+        
+              <form class="form" action="/arrange-face-to-face" method="post">
+        
+                <p>This will be held in the Birmingham Council office at:</p>
+                <div class="govuk-inset-text">
+                  Council House<br>
+                  Victoria Square<br>
+                  Birmingham<br>
+                  B1 1BB<br><br>
+                  <a id="map-google" href="https://www.google.com/maps/place/Birmingham+City+Council/@52.4802007,-1.9049717,17z/data=!3m1!4b1!4m5!3m4!1s0x4870bc8c669b2c25:0x6ba90bbe317956c4!8m2!3d52.4801975!4d-1.902783"><b>View on Google Maps</b></a>
                 </div>
-                <button class="govuk-button" id="gov-button-continue" data-module="govuk-button">Continue</button>
-                <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      I need help uploading my ID.
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    !!!!! Placeholder text for video !!!!!
+              <p>You must bring your photo ID and national insurance number.</p>
+        
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="select-date" name="select-date" type="radio" value="monday">
+                      <label class="govuk-label govuk-radios__label" for="select-date">
+                        Monday 22 August
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="select-date-2" name="select-date" type="radio" value="tuesday">
+                      <label class="govuk-label govuk-radios__label" for="select-date-2">
+                        Tuesday 23 August
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="select-date-3" name="select-date" type="radio" value="wednesday">
+                      <label class="govuk-label govuk-radios__label" for="select-date-3">
+                        Wednesday 24 August
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="select-date-4" name="select-date" type="radio" value="thursday">
+                      <label class="govuk-label govuk-radios__label" for="select-date-4">
+                        Thursday 25 August
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="select-date-5" name="select-date" type="radio" value="friday">
+                      <label class="govuk-label govuk-radios__label" for="select-date-5">
+                        Friday 26 August
+                      </label>
+                    </div>                
                   </div>
-                </details>
+        
+                  <br><br>
+        
+                <button class="govuk-button" id="govuk-button-continue" data-module="govuk-button">Continue</button>
+        
               </form>
+        
             </div>
           </div>
+    
         <!-- end of body -->
     </main>
   </div>
