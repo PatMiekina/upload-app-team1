@@ -57,4 +57,12 @@ router.get('/what-is-your-ni-number', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/what-is-your-ni-number.html'))
 })
 
+router.get('/photo-confirmation', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/photo-confirmation.html'))
+})
+
+router.post('/photo-confirmation', (req, res) => {
+    res.redirect('/verify-documents');
+})
+
 module.exports = router
