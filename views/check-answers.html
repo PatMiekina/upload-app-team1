@@ -57,76 +57,107 @@
     <!-- end of breadcrumbs -->
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <!-- body -->
-        <div class="govuk-grid-row govuk-body">
-            <div class="govuk-grid-column-two-thirds">
-        
-            <h1 class="govuk-heading-xl">How would you prefer to hear from us?</h1>
-        
-            <form class="form" action="/contact-details" method="post">
-        
-                <p>We will contact you by email, text or call to let you know when your ID has been confirmed.</p>
-        
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                        <div id="contact-hint" class="govuk-hint">
-                        Select one option.
-                        </div>
-                        <div class="govuk-radios" data-module="govuk-radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
-                                <label class="govuk-label govuk-radios__label" for="contact">
-                                Email
-                                </label>
-                            </div>
-                            <div class="govuk-radios__conditional" id="conditional-contact">
-                                <div class="govuk-form-group govuk-form-group">
-                                <label class="govuk-label" for="contact-by-email">
-                                    Email address
-                                </label>
-                                
-                                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" aria-describedby="contact-by-email-error" autocomplete="email">
-                                </div>
-                        
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="Phone" data-aria-controls="conditional-contact-2">
-                                <label class="govuk-label govuk-radios__label" for="contact-2">
-                                Phone
-                                </label>
-                            </div>
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                                <div class="govuk-form-group">
-                                <label class="govuk-label" for="contact-by-phone">
-                                    Phone number
-                                </label>
-                                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-                                </div>                
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="Text" data-aria-controls="conditional-contact-3">
-                                <label class="govuk-label govuk-radios__label" for="contact-3">
-                                Text message
-                                </label>
-                            </div>
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                                <div class="govuk-form-group">
-                                <label class="govuk-label" for="contact-by-text">
-                                    Mobile phone number
-                                </label>
-                                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
-                                </div>
-                        
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>  
-                <button class="govuk-button govuk-button-continue" id="govuk-button-continue" data-module="govuk-button">Continue</button>
-        
+        <div class="govuk-grid-row govuk-body"> 
+          <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+            <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+      
+            <form class="form" action="/next-steps" method="post">
+      
+      
+            <h2 class="govuk-heading-m">Personal details</h2>
+      
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John Smith
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/what-is-your-name">
+                    Change
+                    <span class="govuk-visually-hidden"> name</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  National insurance number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  DD123123DD
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/what-is-your-ni-number">
+                    Change
+                    <span class="govuk-visually-hidden"> date of birth</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Photo ID
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Passport
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/upload-photo-id">
+                    Change
+                    <span class="govuk-visually-hidden"> contact information</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  ID verification
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Face to face
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/verify-documents">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p>Telephone
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="/contact-details">
+                    Change
+                    <span class="govuk-visually-hidden"> contact details</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+      
+            
+      
+            <h2 class="govuk-heading-m">Now send your application</h2>
+      
+            <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      
+            <form action="/confirmation" method="post" novalidate>
+      
+              <input type="hidden" name="answers-checked" value="true">
+      
+              <button type="submit" class="govuk-button" id="govuk-button-continue" data-module="govuk-button">
+                Accept and send
+              </button>
+      
             </form>
-        
-            </div>
-        </div>        
-    
+      
+          </div>
+        </div>
         <!-- end of body -->
     </main>
   </div>

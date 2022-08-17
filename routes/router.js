@@ -25,7 +25,7 @@ router.post('/arrange-face-to-face', (req, res) => {
 })
 
 router.get('/check-answers', (req, res) => {
-    res.send("Check answers")
+    res.sendFile(path.join(__dirname, '../views/check-answers.html'))
 })
 
 router.get('/contact-details', (req, res) => {
@@ -109,6 +109,14 @@ router.post('/verify-method-answer', function (req, res) {
     } else {
       res.redirect('/arrange-face-to-face')
     }
- })
+})
+
+router.get('/next-steps', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/next-steps.html'))
+})
+
+router.post('/next-steps', (req, res) => {
+    res.redirect('/next-steps');
+})
  
 module.exports = router
